@@ -1,6 +1,6 @@
 #include "ActionPrint.h"
 
-ActionPrint::ActionPrint() : Action("Print", DataTypes::VOID_E, {Parameter("text",DataTypes::STRING)}, "Prints text to console",
+ActionPrint::ActionPrint() : Action("Print", DataTypes::VOID_DATA_TYPE, {Parameter("text",DataTypes::STRING_DATA_TYPE)}, "Prints text to console",
 									CATEGORY_MISC | CATEGORY_DEBUG) {
 }
 

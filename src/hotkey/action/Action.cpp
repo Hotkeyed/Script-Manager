@@ -39,19 +39,19 @@ void Action::fillOptionalParameters(std::vector<std::shared_ptr<DataType>>& para
 			std::shared_ptr<DataType> defaultValue;
 			switch (this->parameters[i].type) {
 
-				case DataTypes::VOID_E: {
+				case DataTypes::VOID_DATA_TYPE: {
 					defaultValue = std::make_shared<DataTypeVoid>(DataTypeVoid());
 					break;
 				}
-				case DataTypes::INTEGER: {
+				case DataTypes::INTEGER_DATA_TYPE: {
 					defaultValue = std::shared_ptr<DataTypeInteger>(this->parameters[i].defaultValue.getData<DataTypeInteger>());
 					break;
 				}
-				case DataTypes::FLOAT: {
+				case DataTypes::FLOAT_DATA_TYPE: {
 					defaultValue = std::shared_ptr<DataTypeFloat>(this->parameters[i].defaultValue.getData<DataTypeFloat>());
 					break;
 				}
-				case DataTypes::STRING: {
+				case DataTypes::STRING_DATA_TYPE: {
 					defaultValue = std::shared_ptr<DataTypeString>(this->parameters[i].defaultValue.getData<DataTypeString>());
 					break;
 				}

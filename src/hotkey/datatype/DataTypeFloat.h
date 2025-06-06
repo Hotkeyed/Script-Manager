@@ -5,8 +5,8 @@ class DataTypeFloat : public DataTypeImpl<double> {
 public:
 	DataTypeFloat(const std::string& text) : DataTypeImpl(std::stod(text)) {};
 	DataTypeFloat(const double number) : DataTypeImpl(number) {};
-	constexpr DataTypes getType() override { return DataTypes::FLOAT; }
-	const double getDefaultValue() override { return 0; };
-	const bool isValid(const std::string& text) override { return false; };
+	constexpr DataTypes getType() const override { return DataTypes::FLOAT_DATA_TYPE; }
+	const double getDefaultValue() const override { return 0; };
+	const bool isValid(const std::string& text) const override { return false; };
 };
 

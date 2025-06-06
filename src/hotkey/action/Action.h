@@ -19,11 +19,11 @@ public:
 	unsigned int actionCategories;
 	const std::string name;
 	const std::vector<Parameter> parameters;
-	const DataTypes returnType = DataTypes::VOID_E;
+	const DataTypes returnType = DataTypes::VOID_DATA_TYPE;
 	const std::string description;
 
 	Action(const std::string_view& name, 
-		   const DataTypes returnType = DataTypes::VOID_E,
+		   const DataTypes returnType = DataTypes::VOID_DATA_TYPE,
 		   const std::vector<Parameter>& parameters = std::vector<Parameter>(),
 		   const std::string& description = "",
 		   const unsigned int actionCategories = 0);

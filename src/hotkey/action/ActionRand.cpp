@@ -1,7 +1,7 @@
 #include "ActionRand.h"
 
-ActionRand::ActionRand() : Action("RandInt", DataTypes::INTEGER, {Parameter("min",DataTypes::INTEGER,"Min Value",true,DataTypeInteger(0)),
-								                              Parameter("max",DataTypes::INTEGER, "Max Value", true,DataTypeInteger(100))}, "Generates a random integer between [min, max]", CATEGORY_MATH) {
+ActionRand::ActionRand() : Action("RandInt", DataTypes::INTEGER_DATA_TYPE, {Parameter("min",DataTypes::INTEGER_DATA_TYPE,"Min Value",true,DataTypeInteger(0)),
+								                              Parameter("max",DataTypes::INTEGER_DATA_TYPE, "Max Value", true,DataTypeInteger(100))}, "Generates a random integer between [min, max]", CATEGORY_MATH) {
 }
 
 std::shared_ptr<DataType> ActionRand::execute(std::vector<std::shared_ptr<DataType>>& parameters) {
