@@ -33,7 +33,7 @@ bool Action::areParametersValid(const std::vector<std::shared_ptr<DataType>>& pa
 }
 
 void Action::fillOptionalParameters(std::vector<std::shared_ptr<DataType>>& parameters) const {
-	for (int i = this->parameters.size() - parameters.size(); i < parameters.size();i++) {
+	for (int i = this->parameters.size() - parameters.size(); i < parameters.size(); i++) {
 		if (this->parameters[i].optional) {
 			DataTypes type = this->parameters[i].type;
 			std::shared_ptr<DataType> defaultValue;
@@ -44,15 +44,15 @@ void Action::fillOptionalParameters(std::vector<std::shared_ptr<DataType>>& para
 					break;
 				}
 				case DataTypes::INTEGER_DATA_TYPE: {
-					defaultValue = std::shared_ptr<DataTypeInteger>(this->parameters[i].defaultValue.getData<DataTypeInteger>());
+					defaultValue = std::make_shared<DataTypeInteger>(this->parameters[i].defaultValue.getConstData<DataTypeInteger>());
 					break;
 				}
 				case DataTypes::FLOAT_DATA_TYPE: {
-					defaultValue = std::shared_ptr<DataTypeFloat>(this->parameters[i].defaultValue.getData<DataTypeFloat>());
+					defaultValue = std::make_shared<DataTypeFloat>(this->parameters[i].defaultValue.getConstData<DataTypeFloat>());
 					break;
 				}
 				case DataTypes::STRING_DATA_TYPE: {
-					defaultValue = std::shared_ptr<DataTypeString>(this->parameters[i].defaultValue.getData<DataTypeString>());
+					defaultValue = std::make_shared<DataTypeString>(this->parameters[i].defaultValue.getConstData<DataTypeString>());
 					break;
 				}
 				default: {

@@ -16,8 +16,12 @@ class DataTypeImpl;
 struct DataType { 
 	virtual constexpr DataTypes getType() const = 0;
 	template<typename T>
-	const T* getData() const {
-		return static_cast<const DataTypeImpl<T>*>(this);
+	T* getData() {
+		return static_cast<T*>(this);
+	}
+	template<typename T>
+	const T& getConstData() const {
+		return static_cast<const T&>(*this);
 	}
 };
 template <typename T>
