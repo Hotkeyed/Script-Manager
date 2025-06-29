@@ -66,6 +66,9 @@
     <ClCompile Include="src\hotkey\datatype\DataTypeFloat.h">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\script\lexical_analyzer\Lexer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\hotkey\action\Action.h">
@@ -105,6 +108,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\hotkey\datatype\DataTypeString.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\script\lexical_analyzer\Token.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\script\lexical_analyzer\Lexer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
