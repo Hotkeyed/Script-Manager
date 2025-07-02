@@ -15,7 +15,7 @@ struct TokenParserOperator : public TokenParser {
     constexpr std::string type() const override { return "Operator"; };
     virtual const std::unordered_set<std::string> keywords() const override {
         return {
-         "+", "-", "*", "/", "%", "=", "==", "!=", "<", "<=", ">", ">=",
+		 "+", "-", "*", "/", "%", "=", "==", "!=", "<", "<=", ">", ">=","++", "--",
         "&&", "||", "!", "&", "|", "^", "~",
         "<<", ">>", "<<=", ">>=", "+=", "-=", "*=", "/=", "%=", "&=", "|=", "^="
         };

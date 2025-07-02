@@ -18,7 +18,6 @@ void Lexer::skipWhitespace() {
 		advance();
 	}
 }
-#include <iostream>
 Token Lexer::getNextToken() {
 	skipWhitespace();
 	if (pos >= source.size()) {
@@ -29,10 +28,11 @@ Token Lexer::getNextToken() {
 		size_t newPos = pos;
 		std::optional<std::string> value = parser->parse(source, newPos);
 		if (value) {
+			Token t = Token(*parser, *value, line, column);
 			for (size_t i = 0; i < newPos - originalPos;i++) {
 				advance();
 			}
-			return Token(*parser, *value, line, column);
+			return t;
 		}
 	}
 	//move on to the next character if no parser matched to prevent infinite loop
@@ -45,5 +45,6 @@ std::vector<Token> Lexer::tokenize() {
 	while (Token token = getNextToken()) {
 		tokens.push_back(token);
 	}
+
 	return tokens;
 }

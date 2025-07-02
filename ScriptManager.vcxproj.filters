@@ -122,37 +122,37 @@
     <ClInclude Include="src\script\lexical_analyzer\token\TokenParser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\script\lexical_analyzer\token\parsers\TokenParserUnkown.h">
+    <ClInclude Include="src\script\lexical_analyzer\token\token_parsers\TokenParserUnkown.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\script\lexical_analyzer\token\parsers\TokenParserString.h">
+    <ClInclude Include="src\script\lexical_analyzer\token\token_parsers\TokenParserString.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\script\lexical_analyzer\token\parsers\TokenParserComment.h">
+    <ClInclude Include="src\script\lexical_analyzer\token\token_parsers\TokenParserComment.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\script\lexical_analyzer\token\parsers\TokenParserKeyword.h">
+    <ClInclude Include="src\script\lexical_analyzer\token\token_parsers\TokenParserKeyword.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\script\lexical_analyzer\token\parsers\TokenParserIdentifier.h">
+    <ClInclude Include="src\script\lexical_analyzer\token\token_parsers\TokenParserIdentifier.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\script\lexical_analyzer\token\parsers\TokenParserOperator.h">
+    <ClInclude Include="src\script\lexical_analyzer\token\token_parsers\TokenParserOperator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\script\lexical_analyzer\token\parsers\TokenParserSymbol.h">
+    <ClInclude Include="src\script\lexical_analyzer\token\token_parsers\TokenParserSymbol.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\script\lexical_analyzer\token\parsers\TokenParserType.h">
+    <ClInclude Include="src\script\lexical_analyzer\token\token_parsers\TokenParserType.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\script\lexical_analyzer\token\parsers\TokenParserNumber.h">
+    <ClInclude Include="src\script\lexical_analyzer\token\token_parsers\TokenParserNumber.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\script\lexical_analyzer\token\parsers\TokenParserEndOfFile.h">
+    <ClInclude Include="src\script\lexical_analyzer\token\token_parsers\TokenParserEndOfFile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\script\lexical_analyzer\token\parsers\TokenParserHotkey.h">
+    <ClInclude Include="src\script\lexical_analyzer\token\token_parsers\TokenParserHotkey.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

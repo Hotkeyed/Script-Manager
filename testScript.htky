@@ -4,7 +4,7 @@ MoveMouse(100,100);
 
 MoveMouse(150,100);
 
-function testFunction() {
+void testFunction() {
 	Print("function print");
 }
 
@@ -12,7 +12,7 @@ function testFunction() {
 	MoveMouse(800,900);
 }
 
-function parameterTest(num1, num2) {
+void parameterTest(num1, num2) {
 
 }
 [s + b + + + [] {
@@ -38,3 +38,7 @@ Print(           "Global Block test"         );
 	Print("real");
 }
 Print("Other Global Block test");
+
+[h + \] + + a] {
+	Print("escape character test");
+}

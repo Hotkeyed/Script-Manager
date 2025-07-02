@@ -1,16 +1,16 @@
 #pragma once
 #include "TokenParser.h"
-#include "parsers/TokenParserUnkown.h"
-#include "parsers/TokenParserEndOfFile.h"
-#include "parsers/TokenParserString.h"
-#include "parsers/TokenParserComment.h"
-#include "parsers/TokenParserKeyword.h"
-#include "parsers/TokenParserIdentifier.h"
-#include "parsers/TokenParserOperator.h"
-#include "parsers/TokenParserType.h"
-#include "parsers/TokenParserSymbol.h"
-#include "parsers/TokenParserNumber.h"
-#include "parsers/TokenParserHotkey.h"
+#include "token_parsers/TokenParserUnkown.h"
+#include "token_parsers/TokenParserEndOfFile.h"
+#include "token_parsers/TokenParserString.h"
+#include "token_parsers/TokenParserComment.h"
+#include "token_parsers/TokenParserKeyword.h"
+#include "token_parsers/TokenParserIdentifier.h"
+#include "token_parsers/TokenParserOperator.h"
+#include "token_parsers/TokenParserType.h"
+#include "token_parsers/TokenParserSymbol.h"
+#include "token_parsers/TokenParserNumber.h"
+#include "token_parsers/TokenParserHotkey.h"
 #include <set>
 #include <memory>
 namespace TokenParsers {
