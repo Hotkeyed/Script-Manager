@@ -9,9 +9,9 @@
 #include <algorithm>
 #include <keyboard/DeviceKeys.h>
 #include "../hotkey/Hotkey.h"
-#include "../hotkey/action/Action.h"
-#include "../hotkey/action/CallableAction.h"
-#include "../hotkey/action/ActionManager.h"
+#include "../hotkey/Action.h"
+#include "../hotkey/CallableAction.h"
+#include "../hotkey/ActionManager.h"
 #include "TextBlock.h"
 #include <Util.h>
 #include <utility>

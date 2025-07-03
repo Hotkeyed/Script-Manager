@@ -3,9 +3,9 @@
 #include <memory>
 #include "Action.h"
 
-#include "ActionPrint.h"
-#include "ActionMoveMouse.h"
-#include "ActionRand.h"
+#include "action/ActionPrint.h"
+#include "action/ActionMoveMouse.h"
+#include "action/ActionRand.h"
 class ActionManager {
 private:	
 	//private constructor because singleton

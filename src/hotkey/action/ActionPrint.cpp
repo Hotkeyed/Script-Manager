@@ -1,10 +1,10 @@
 #include "ActionPrint.h"
 
-ActionPrint::ActionPrint() : Action("Print", DataTypes::VOID_DATA_TYPE, {Parameter("text",DataTypes::STRING_DATA_TYPE)}, "Prints text to console",
+ActionPrint::ActionPrint() : Action("Print", DataTypes::dataTypeVoid, {Parameter("text",DataTypes::dataTypeString)}, "Prints text to console",
 									CATEGORY_MISC | CATEGORY_DEBUG) {
 }
 
-std::shared_ptr<DataType> ActionPrint::execute(std::vector<std::shared_ptr<DataType>>& parameters) {
-	std::cout << parameters[0]->getData<DataTypeString>()->value;
-	return std::make_shared<DataTypeVoid>(DataTypeVoid());
+std::shared_ptr<Data> ActionPrint::execute(std::vector<std::shared_ptr<Data>>& parameters) {
+	std::cout << parameters[0]->getData<std::string>();
+	return Data::EMPTY;
 }

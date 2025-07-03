@@ -18,10 +18,10 @@
     <ClCompile Include="src\ScriptManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\hotkey\action\Action.cpp">
+    <ClCompile Include="src\hotkey\Action.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\hotkey\action\ActionManager.cpp">
+    <ClCompile Include="src\hotkey\ActionManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\hotkey\action\ActionMoveMouse.cpp">
@@ -42,10 +42,10 @@
     <ClCompile Include="src\hotkey\ScriptFunction.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\hotkey\action\CallableAction.h">
+    <ClCompile Include="src\hotkey\CallableAction.h">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\hotkey\action\CallableAction.cpp">
+    <ClCompile Include="src\hotkey\CallableAction.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\hotkey\action\ActionRand.h">
@@ -57,13 +57,13 @@
     <ClCompile Include="lib\BigFloat\BigFloat.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\hotkey\datatype\DataTypeVoid.h">
+    <ClCompile Include="src\hotkey\data\types\DataTypeVoid.h">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\hotkey\datatype\DataTypeInteger.h">
+    <ClCompile Include="src\hotkey\data\types\DataTypeInteger.h">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\hotkey\datatype\DataTypeFloat.h">
+    <ClCompile Include="src\hotkey\data\types\DataTypeFloat.h">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\script\lexical_analyzer\Lexer.cpp">
@@ -71,10 +71,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\hotkey\action\Action.h">
+    <ClInclude Include="src\hotkey\Action.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\hotkey\action\ActionManager.h">
+    <ClInclude Include="src\hotkey\ActionManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\hotkey\action\ActionMoveMouse.h">
@@ -104,10 +104,10 @@
     <ClInclude Include="lib\BigFloat\BigFloat.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\hotkey\datatype\DataType.h">
+    <ClInclude Include="src\hotkey\data\DataType.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\hotkey\datatype\DataTypeString.h">
+    <ClInclude Include="src\hotkey\data\types\DataTypeString.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\script\lexical_analyzer\token\Token.h">
@@ -153,6 +153,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\script\lexical_analyzer\token\token_parsers\TokenParserHotkey.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\hotkey\data\Data.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\hotkey\data\DataTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\hotkey\data\types\DataTypeBoolean.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

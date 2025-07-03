@@ -2,7 +2,7 @@
 #include <vector>
 #include <memory>
 #include <keyboard/Key.h>
-#include "action/Action.h"
+#include "Action.h"
 #include "ScriptFunction.h"
 //Hotkey is basically function with no parameters or name
 class Hotkey : public ScriptFunction{

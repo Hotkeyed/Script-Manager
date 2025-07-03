@@ -1,17 +1,19 @@
 #include "ActionRand.h"
 
-ActionRand::ActionRand() : Action("RandInt", DataTypes::INTEGER_DATA_TYPE, {Parameter("min",DataTypes::INTEGER_DATA_TYPE,"Min Value",true,DataTypeInteger(0)),
-								                              Parameter("max",DataTypes::INTEGER_DATA_TYPE, "Max Value", true,DataTypeInteger(100))}, "Generates a random integer between [min, max]", CATEGORY_MATH) {
+ActionRand::ActionRand() : Action("RandInt", DataTypes::dataTypeInteger, {
+	Parameter("min",Data(DataTypes::dataTypeInteger,0),"Min Value",true),
+	Parameter("max",Data(DataTypes::dataTypeInteger,100), "Max Value", true)
+								  }, "Generates a random integer between [min, max]", CATEGORY_MATH) {
 }
 
-std::shared_ptr<DataType> ActionRand::execute(std::vector<std::shared_ptr<DataType>>& parameters) {
-	int min = parameters[0]->getData<DataTypeInteger>()->value;
-	int max = parameters[1]->getData<DataTypeInteger>()->value;
+std::shared_ptr<Data> ActionRand::execute(std::vector<std::shared_ptr<Data>>& parameters) {
+	int min = parameters[0]->getData<long long int>();
+	int max = parameters[1]->getData<long long int>();
 
 	std::random_device dev;
 	std::mt19937 rng(dev());
 	// distribution in range [min, max]
 	std::uniform_int_distribution<std::mt19937::result_type> distribution(min, max);
 
-	return std::make_shared<DataTypeInteger>(distribution(rng));
+	return std::make_shared<Data>(DataTypes::dataTypeInteger,distribution(rng));
 }

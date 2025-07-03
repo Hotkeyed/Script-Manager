@@ -1,26 +1,22 @@
 #pragma once
 #include <string>
 #include <memory>
-#include "../datatype/DataType.h"
-#include "../datatype/DataTypeFloat.h"
-#include "../datatype/DataTypeInteger.h"
-#include "../datatype/DataTypeVoid.h"
-#include "../datatype/DataTypeString.h"
+#include "../data/Data.h"
+#include "../data/DataTypes.h"
 //parameter to be held in a function or action
 struct Parameter {
 	const std::string name;
 	const std::string description;
 	const bool optional = false;
-	const DataTypes type;
-	const DataType& defaultValue;
+	//stores data type and default value
+	const Data dataType;
 
 	//this constructor should be used if parameter is not optional
 	Parameter(
 		const std::string& name,
-		const DataTypes type,
+		const Data& dataType = Data(DataTypes::dataTypeVoid),
 		const std::string& description = "",
-		const bool optional = false,
-		const DataType& defaultValue = DataTypeVoid()
-		) : name(name), type(type), description(description), optional(optional), defaultValue(defaultValue) {
+		const bool optional = false
+		) : name(name), dataType(dataType), description(description), optional(optional) {
 	};
 };
