@@ -12,6 +12,8 @@ struct TokenParser {
 };
 struct CustomTokenParserComparator {
 	bool operator()(const std::shared_ptr<const TokenParser>& lhs, const std::shared_ptr<const TokenParser>& rhs) const {
-		return lhs->precedence() > rhs->precedence();
+		if (lhs->precedence() > rhs->precedence())
+			return lhs->precedence() > rhs->precedence();
+		return lhs.get() < rhs.get();
 	}
 };

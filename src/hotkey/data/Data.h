@@ -14,7 +14,7 @@ struct Data {
 			}
 		}
 	}
-	Data(const IDataType& type, std::any value) : type(type), value(value) {}
+	Data(const IDataType& type, const std::any& value) : type(type), value(value) {}
 
 	template<typename T>
 	T getData() const {

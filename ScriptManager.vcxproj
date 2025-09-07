@@ -167,9 +167,15 @@
     <ClCompile Include="src\ScriptManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\script\ast\Parser.h" />
     <ClInclude Include="src\hotkey\data\Data.h" />
     <ClInclude Include="src\hotkey\data\DataTypes.h" />
     <ClInclude Include="src\hotkey\data\types\DataTypeBoolean.h" />
+    <ClInclude Include="src\script\ast\ASTNode.h" />
+    <ClInclude Include="src\script\ast\ASTParser.h" />
+    <ClInclude Include="src\script\ast\ASTParsers.h" />
+    <ClInclude Include="src\script\ast\ast_parsers\PrimaryParser.h" />
+    <ClInclude Include="src\script\ast\TokenStream.h" />
     <ClInclude Include="src\script\lexical_analyzer\Lexer.h" />
     <ClInclude Include="lib\BigFloat\BigFloat.h" />
     <ClInclude Include="src\hotkey\data\DataType.h" />
@@ -191,7 +197,6 @@
     <ClInclude Include="src\script\lexical_analyzer\token\TokenParsers.h" />
     <ClInclude Include="src\script\lexical_analyzer\token\token_parsers\TokenParserString.h" />
     <ClInclude Include="src\script\lexical_analyzer\token\token_parsers\TokenParserUnkown.h" />
-    <ClInclude Include="src\script\TextBlock.h" />
     <ClInclude Include="src\script\Script.h" />
     <ClInclude Include="src\hotkey\Action.h" />
     <ClInclude Include="src\hotkey\ActionManager.h" />
