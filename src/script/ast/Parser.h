@@ -11,29 +11,32 @@ namespace Parser {
     std::shared_ptr<ASTNode> parseExpression(TokenStream& tokens, int minPrec = 0) {
         std::shared_ptr<ASTNode> left = nullptr;
 
-        // prefix / primary
+        // --- prefix / primary ---
         for (auto& parser : ASTParsers::parsers) {
-            if (auto node = parser->parse(tokens, nullptr)) {
-                if (node)
-                    left = *node;
+            auto optNode = parser->parse(tokens, nullptr);
+            if (optNode.has_value()) {
+                left = *optNode;   // extract shared_ptr<ASTNode>
                 break;
             }
         }
         if (!left) return nullptr;
 
+        // --- infix / binary loop ---
         while (true) {
             bool matched = false;
             for (auto& parser : ASTParsers::parsers) {
                 if (parser->precedence() < minPrec) continue;
-                if (auto node = parser->parse(tokens, left)) {
-                    if (node)
-                        left = *node;
+
+                auto optNode = parser->parse(tokens, left);
+                if (optNode.has_value()) {
+                    left = *optNode;  // update left side of expression
                     matched = true;
                     break;
                 }
             }
             if (!matched) break;
         }
+
         return left;
     }
 }

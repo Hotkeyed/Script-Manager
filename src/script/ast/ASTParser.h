@@ -20,8 +20,6 @@ public:
 struct CustomASTParserComparator {
     bool operator()(const std::shared_ptr<ASTParser>& a,
                     const std::shared_ptr<ASTParser>& b) const {
-        if (a->precedence() != b->precedence())
-            return a->precedence() > b->precedence();
-        return a.get() < b.get();
+        return a->precedence() > b->precedence();
     }
 };

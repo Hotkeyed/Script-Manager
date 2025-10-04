@@ -2,23 +2,24 @@
 
 void ScriptEngine::keyboardInterceptor(const Keyboard& keyboard, const KEYSTATE state, const DeviceKey& key) {
 	std::cout << keyboard.id << "\n";
-	for (Script s : scripts) {
-		for (Hotkey h : s.hotkeys) {
-			for (Key k : h.keys) {
-				if (k.key.value == key.value && k.isDeviceIdValid(keyboard.id)) {
-					bool allKeysDown = true;
-					for (Key kk : h.keys) {
-						if (interceptor.activeKeyStates.isKeyBeingUsed(kk) != 0) {
-							allKeysDown = false;
-						}
-					}
-					if (allKeysDown) {
-						std::cout << "hotkey activated" << "\n";
-					}
-				}
-			}
-		}
-	}
+	//for (Script s : scripts) {
+	//	for (Hotkey h : s.hotkeys) {
+	//		for (Key k : h.keys) {
+	//			if (k.key.value == key.value && k.isDeviceIdValid(keyboard.id)) {
+	//				bool allKeysDown = true;
+	//				for (Key kk : h.keys) {
+	//					if (interceptor.activeKeyStates.isKeyBeingUsed(kk) != 0) {
+	//						allKeysDown = false;
+	//					}
+	//				}
+	//				if (allKeysDown) {
+	//					std::cout << "hotkey activated" << "\n";
+	//				}
+	//			}
+	//		}
+	//	}
+	//}
+
 	
 }
 void ScriptEngine::mouseInterceptor(const Mouse& mouse, const KEYSTATE state, const DeviceKey& key, int x, int y) {
